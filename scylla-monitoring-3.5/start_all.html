@@ -128,6 +128,12 @@ If not used, each run of the containers will clear all of Grafana information.</
 <p><strong>-g grafana port</strong> Override the default grafana port, this is done using port mapping, note that port mapping does not work when using the host network.</p>
 <p><strong>-a admin password</strong> Allows specifying the admin password.</p>
 <p><strong>-Q Grafana anonymous role</strong> By default, anonymous users have admin privileges. That means they can create and edit dashboards. The <code class="docutils literal notranslate"><span class="pre">-Q</span></code> flag changes this behavior  by setting the role privileges to one of Admin, Editor, or Viewer.</p>
+<div class="section" id="grafana-ldap-support">
+<h3>Grafana LDAP support<a class="headerlink" href="#grafana-ldap-support" title="Permalink to this headline">¶</a></h3>
+<p>Grafana supports <a class="reference external" href="https://grafana.com/docs/grafana/latest/auth/ldap/">LDAP</a> for authentication and authorization.</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">-P</span></code> flag to supply an LDAP configuration file.</p>
+<p><strong>-P ldap-config-file</strong></p>
+</div>
 </div>
 <div class="section" id="prometheus-related-commands">
 <h2>Prometheus Related Commands<a class="headerlink" href="#prometheus-related-commands" title="Permalink to this headline">¶</a></h2>
@@ -274,7 +280,7 @@ Prometheus storage configuration is covered <a class="reference external" href="
                 &#169; 2020, ScyllaDB. All rights reserved.
             </div>
             <div class="footer-last-updated">
-                Last updated on 28 October 2020.
+                Last updated on 29 October 2020.
             </div>
         </div>
         <div class="footer-links">

@@ -131,11 +131,11 @@ Prometheus Storage disk does not have to be as fast as Scylla disk, and EC2 EBS,
 <ol class="arabic simple">
 <li><p>Download the latest Scylla Monitoring release.</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">https://github.com/scylladb/scylla-monitoring/archive/scylla-monitoring-3.4.tar.gz</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">https://github.com/scylladb/scylla-monitoring/archive/scylla-monitoring-3.5.tar.gz</span></code></p>
 <ol class="arabic simple" start="2">
 <li><p>Open the tar</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-xvf</span> <span class="pre">scylla-monitoring-3.4.tar.gz</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">tar</span> <span class="pre">-xvf</span> <span class="pre">scylla-monitoring-3.5.tar.gz</span></code></p>
 </div>
 <div class="section" id="install-alertmanager">
 <h2>Install Alertmanager<a class="headerlink" href="#install-alertmanager" title="Permalink to this headline">¶</a></h2>
@@ -148,10 +148,10 @@ tar -xvf alertmanager-0.20.0.linux-amd64.tar.gz
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Copy the following file: <code class="docutils literal notranslate"><span class="pre">rule_config.yml</span></code> from <code class="docutils literal notranslate"><span class="pre">scylla-monitoring-scylla-monitoring-3.4/prometheus</span></code> directory to <code class="docutils literal notranslate"><span class="pre">alertmanager.yml</span></code> in the alertmanager installation directory.</p></li>
+<li><p>Copy the following file: <code class="docutils literal notranslate"><span class="pre">rule_config.yml</span></code> from <code class="docutils literal notranslate"><span class="pre">scylla-monitoring-scylla-monitoring-3.5/prometheus</span></code> directory to <code class="docutils literal notranslate"><span class="pre">alertmanager.yml</span></code> in the alertmanager installation directory.</p></li>
 </ol>
 <p>For example:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cp -p /home/centos/scylla-monitoring-scylla-monitoring-3.4/prometheus/rule_config.yml /home/centos/alertmanager-0.20.0.linux-amd64/alertmanager.yml
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cp -p /home/centos/scylla-monitoring-scylla-monitoring-3.5/prometheus/rule_config.yml /home/centos/alertmanager-0.20.0.linux-amd64/alertmanager.yml
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
@@ -182,12 +182,12 @@ tar -xvf prometheus-2.18.1.linux-amd64.tar.gz
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>Copy the following files: <code class="docutils literal notranslate"><span class="pre">scylla_servers.yml</span></code>, <code class="docutils literal notranslate"><span class="pre">prometheus.rules.yml</span></code> from <code class="docutils literal notranslate"><span class="pre">scylla-monitoring-scylla-monitoring-3.4/prometheus</span></code> directory to Prometheus installation directory.</p></li>
+<li><p>Copy the following files: <code class="docutils literal notranslate"><span class="pre">scylla_servers.yml</span></code>, <code class="docutils literal notranslate"><span class="pre">prometheus.rules.yml</span></code> from <code class="docutils literal notranslate"><span class="pre">scylla-monitoring-scylla-monitoring-3.5/prometheus</span></code> directory to Prometheus installation directory.</p></li>
 </ol>
 <p>Copy <code class="docutils literal notranslate"><span class="pre">prometheus/prometheus.yml.template</span></code> to <code class="docutils literal notranslate"><span class="pre">prometheus.yml</span></code></p>
 <p>For example:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cp scylla-monitoring-scylla-monitoring-3.4/prometheus/*.yml prometheus-2.18.1.linux-amd64
-cp scylla-monitoring-scylla-monitoring-3.4/prometheus/prometheus.yml.template prometheus-2.18.1.linux-amd64/prometheus.yml
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>cp scylla-monitoring-scylla-monitoring-3.5/prometheus/*.yml prometheus-2.18.1.linux-amd64
+cp scylla-monitoring-scylla-monitoring-3.5/prometheus/prometheus.yml.template prometheus-2.18.1.linux-amd64/prometheus.yml
 </pre></div>
 </div>
 <ol class="arabic simple" start="3">
@@ -327,7 +327,7 @@ different in the rest of the steps.</p>
 <ol class="arabic simple" start="2">
 <li><p>Access Scylla-Grafana-monitoring directory</p></li>
 </ol>
-<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">scylla-monitoring-scylla-monitoring-3.4/</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">scylla-monitoring-scylla-monitoring-3.5/</span></code></p>
 <ol class="arabic simple" start="3">
 <li><p>Copy the plugins to the grafana plugins directory (by default <code class="docutils literal notranslate"><span class="pre">/var/lib/grafana/</span></code>)</p></li>
 </ol>
@@ -534,7 +534,7 @@ datasources:
                 &#169; 2020, ScyllaDB. All rights reserved.
             </div>
             <div class="footer-last-updated">
-                Last updated on 28 October 2020.
+                Last updated on 29 October 2020.
             </div>
         </div>
         <div class="footer-links">
